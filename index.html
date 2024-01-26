@@ -169,7 +169,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-01-23 13:49:49 / Modified: 13:58:47" itemprop="dateCreated datePublished" datetime="2024-01-23T13:49:49-06:00">2024-01-23</time>
+      <time title="Created: 2024-01-23 13:49:49 / Modified: 14:06:23" itemprop="dateCreated datePublished" datetime="2024-01-23T13:49:49-06:00">2024-01-23</time>
     </span>
 
   
@@ -185,16 +185,14 @@
           <h1 id="EECS246-Convolutional-Signal"><a href="#EECS246-Convolutional-Signal" class="headerlink" title="EECS246:Convolutional_Signal"></a>EECS246:Convolutional_Signal</h1><p>What is <strong>Convolution</strong> ?</p>
 <p>Convolution is an operation of two functions(<em>x(t) &amp; h(t)</em> ) that produce a new function (<em>y(t) &#x3D; x(t)·h(t)</em>) which expresses how the shape of one is modified by the other. </p>
 <p>[ 假设我们有一个信号函数x(t)与系统响应函数h(t)，它们的卷积便是x*h(t) ] </p>
-<h3 id="Computation-Method"><a href="#Computation-Method" class="headerlink" title="Computation Method"></a>Computation Method</h3><h4 id="D-T"><a href="#D-T" class="headerlink" title="D.T"></a>D.T</h4><p>[y(n)&#x3D;\sum_{-\infty}^\infty {x(t)h(n-t)}dt ]</p>
-<h4 id="C-T"><a href="#C-T" class="headerlink" title="C.T"></a>C.T</h4><p>[y(n)&#x3D;\int_{-\infty}^\infty {x(t)h(n-t)} ]</p>
-<h3 id="简单解释："><a href="#简单解释：" class="headerlink" title="简单解释："></a>简单解释：</h3><p>先对h函数进行y-axis翻转，也就是卷积中“卷”的部分。</p>
-<p>然后对把翻转后后的h函数一步一步平移至n的位置，期间每一步都与x函数相乘，然后相加。这一步便是“积”的部分。</p>
-<p>翻转—&gt;滑动—&gt;叠加—&gt;滑动—&gt;叠加… 这便是卷积信号的简易过程。</p>
-<h4 id="为什么要进行卷？"><a href="#为什么要进行卷？" class="headerlink" title="为什么要进行卷？"></a>为什么要进行卷？</h4><p>在信号处理中，输出的信号并不一定只限于当前时刻输入信号与系统响应信号有关，还与过去时刻的信号与其响应有关，于是便需要有“卷”。</p>
-<h3 id="扩展知识："><a href="#扩展知识：" class="headerlink" title="扩展知识："></a>扩展知识：</h3><p>信号的卷积与深度学习中的卷积神经网络(CNN)有什么关联？</p>
-<p>卷积这一概念不止能用于信号处理，同时也能应用于图像处理领域</p>
-<p>在图像处理中，卷积处理的应用便是把一个像素周边的像素都考虑在内，从而对这个像素进行一种加权处理。就像CNN中对一个像素周边范围内的全部像素进行考虑，从而完成对这个像素的特征提取。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/01/23/EECS246-Convolutional-Signal/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
