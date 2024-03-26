@@ -1,288 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16.ico">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
+{% extends '_layout.swig' %}
+{% import '_macro/post.swig' as post_template %}
+{% import '_macro/sidebar.swig' as sidebar_template %}
 
 
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-
-    <meta name="description" content="EECS246:Convolutional_SignalWhat is Convolution ? Convolution is an operation of two functions(x(t) &amp; h(t) ) that produce a new function (y(t) &#x3D; x(t)·h(t)) which expresses how the shape of on">
-<meta property="og:type" content="article">
-<meta property="og:title" content="EECS246:Convolutional_Signal">
-<meta property="og:url" content="http://example.com/2024/01/23/EECS246-Convolutional-Signal/index.html">
-<meta property="og:site_name" content="PasserBo Blog Site">
-<meta property="og:description" content="EECS246:Convolutional_SignalWhat is Convolution ? Convolution is an operation of two functions(x(t) &amp; h(t) ) that produce a new function (y(t) &#x3D; x(t)·h(t)) which expresses how the shape of on">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-01-23T19:49:49.000Z">
-<meta property="article:modified_time" content="2024-01-23T20:06:23.567Z">
-<meta property="article:author" content="Yiyang Xu">
-<meta name="twitter:card" content="summary">
+{% block page_class %}page-post-detail{% endblock %}
 
 
-<link rel="canonical" href="http://example.com/2024/01/23/EECS246-Convolutional-Signal/">
+{% block content %}
 
+  <div id="posts" class="posts-expand">
+    {{ post_template.render(page) }}
 
-
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2024/01/23/EECS246-Convolutional-Signal/","path":"2024/01/23/EECS246-Convolutional-Signal/","title":"EECS246:Convolutional_Signal"}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>EECS246:Convolutional_Signal | PasserBo Blog Site</title>
-  
-
-
-
-
-
-
-
-
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
-
-  <main class="main">
-    <div class="column">
-      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    <div class="post-spread">
+      {% if theme.jiathis %}
+        {% include '_partials/share/jiathis.swig' %}
+      {% elseif theme.baidushare %}
+        {% include '_partials/share/baidushare.swig' %}
+      {% elseif theme.add_this_id %}
+        {% include '_partials/share/add-this.swig' %}
+      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
+        {% include '_partials/share/duoshuo_share.swig' %}
+      {% endif %}
     </div>
   </div>
 
-  <div class="site-meta">
+{% endblock %}
 
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <p class="site-title">PasserBo Blog Site</p>
-      <i class="logo-line"></i>
-    </a>
-  </div>
+{% block sidebar %}
+  {{ sidebar_template.render(true) }}
+{% endblock %}
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="Search" role="button">
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-</header>
-        
-  
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#EECS246-Convolutional-Signal"><span class="nav-number">1.</span> <span class="nav-text">EECS246:Convolutional_Signal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Computation-Method"><span class="nav-number">1.0.1.</span> <span class="nav-text">Computation Method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#D-T"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">D.T</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-T"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">C.T</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E8%A7%A3%E9%87%8A%EF%BC%9A"><span class="nav-number">1.0.2.</span> <span class="nav-text">简单解释：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%BF%9B%E8%A1%8C%E5%8D%B7%EF%BC%9F"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">为什么要进行卷？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A9%E5%B1%95%E7%9F%A5%E8%AF%86%EF%BC%9A"><span class="nav-number">1.0.3.</span> <span class="nav-text">扩展知识：</span></a></li></ol></li></ol></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Yiyang Xu</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">2</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-        </div>
-      </div>
-    </div>
-
-    
-  </aside>
-
-
-    </div>
-
-    <div class="main-inner post posts-expand">
-
-
-  
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/23/EECS246-Convolutional-Signal/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yiyang Xu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PasserBo Blog Site">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="EECS246:Convolutional_Signal | PasserBo Blog Site">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          EECS246:Convolutional_Signal
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2024-01-23 13:49:49 / Modified: 14:06:23" itemprop="dateCreated datePublished" datetime="2024-01-23T13:49:49-06:00">2024-01-23</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody"><h1 id="EECS246-Convolutional-Signal"><a href="#EECS246-Convolutional-Signal" class="headerlink" title="EECS246:Convolutional_Signal"></a>EECS246:Convolutional_Signal</h1><p>What is <strong>Convolution</strong> ?</p>
-<p>Convolution is an operation of two functions(<em>x(t) &amp; h(t)</em> ) that produce a new function (<em>y(t) &#x3D; x(t)·h(t)</em>) which expresses how the shape of one is modified by the other. </p>
-<p>[ 假设我们有一个信号函数x(t)与系统响应函数h(t)，它们的卷积便是x*h(t) ] </p>
-<span id="more"></span>
-
-<h3 id="Computation-Method"><a href="#Computation-Method" class="headerlink" title="Computation Method"></a>Computation Method</h3><h4 id="D-T"><a href="#D-T" class="headerlink" title="D.T"></a>D.T</h4><p>[y(n)&#x3D;\sum_{-\infty}^\infty {x(t)h(n-t)}dt ]</p>
-<h4 id="C-T"><a href="#C-T" class="headerlink" title="C.T"></a>C.T</h4><p>[y(n)&#x3D;\int_{-\infty}^\infty {x(t)h(n-t)} ]</p>
-<h3 id="简单解释："><a href="#简单解释：" class="headerlink" title="简单解释："></a>简单解释：</h3><p>先对h函数进行y-axis翻转，也就是卷积中“卷”的部分。</p>
-<p>然后对把翻转后后的h函数一步一步平移至n的位置，期间每一步都与x函数相乘，然后相加。这一步便是“积”的部分。</p>
-<p>翻转—&gt;滑动—&gt;叠加—&gt;滑动—&gt;叠加… 这便是卷积信号的简易过程。</p>
-<h4 id="为什么要进行卷？"><a href="#为什么要进行卷？" class="headerlink" title="为什么要进行卷？"></a>为什么要进行卷？</h4><p>在信号处理中，输出的信号并不一定只限于当前时刻输入信号与系统响应信号有关，还与过去时刻的信号与其响应有关，于是便需要有“卷”。</p>
-<h3 id="扩展知识："><a href="#扩展知识：" class="headerlink" title="扩展知识："></a>扩展知识：</h3><p>信号的卷积与深度学习中的卷积神经网络(CNN)有什么关联？</p>
-<p>卷积这一概念不止能用于信号处理，同时也能应用于图像处理领域</p>
-<p>在图像处理中，卷积处理的应用便是把一个像素周边的像素都考虑在内，从而对这个像素进行一种加权处理。就像CNN中对一个像素周边范围内的全部像素进行考虑，从而完成对这个像素的特征提取。</p>
-
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2023/08/02/hello-world/" rel="prev" title="Hello World">
-                  <i class="fa fa-angle-left"></i> Hello World
-                </a>
-            </div>
-            <div class="post-nav-item">
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-  <div class="copyright">
-    &copy; 
-    <span itemprop="copyrightYear">2024</span>
-    <span class="with-love">
-      <i class="fa fa-heart"></i>
-    </span>
-    <span class="author" itemprop="copyrightHolder">Yiyang Xu</span>
-  </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
-
-    </div>
-  </footer>
-
-  
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-  <div class="sidebar-dimmer"></div>
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up fa-lg"></i>
-    <span>0%</span>
-  </div>
-
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-</body>
-</html>
+{% block script_extra %}
+  {% include '_scripts/pages/post-details.swig' %}
+{% endblock %}
