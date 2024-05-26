@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
 
 
-  
-
-
-<html class="theme-next muse use-motion" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!-- comment -->
 
 
 
@@ -29,6 +26,7 @@
 
 
 
+<!-- analytics -->
 
 
 
@@ -36,39 +34,11 @@
 
 
 
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+    <!-- ## Preload ## -->
+    
+    <!-- Busuanzi -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" as="script">
 
 
 
@@ -76,488 +46,483 @@
 
 
 
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
 
+    <!-- Title -->
+    <title>About Me | PasserBo Blog Site</title>
 
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/suka-favicon.ico">
 
-<meta name="description" content="Hi, I’m Yiyang XuI’m currently a master student at the University of Illinois at Urbana Champaign studying computer science. [-] Development A few things about me  I expertise in:  Languages:  Databas">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About Me">
-<meta property="og:url" content="http://example.com/about/index.html">
-<meta property="og:site_name" content="PasserBo Blog Site">
-<meta property="og:description" content="Hi, I’m Yiyang XuI’m currently a master student at the University of Illinois at Urbana Champaign studying computer science. [-] Development A few things about me  I expertise in:  Languages:  Databas">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-01-26T16:13:31.000Z">
-<meta property="article:modified_time" content="2024-01-26T16:44:48.814Z">
-<meta property="article:author" content="Yiyang Xu">
-<meta name="twitter:card" content="summary">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
     }
-  };
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
+
+    .avatar {
+        background: #444;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
+
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
 </script>
 
-
-
-  <link rel="canonical" href="http://example.com/about/"/>
-
-
-
-
-
-  <title>About Me | PasserBo Blog Site</title>
-  
-
-
-
-
-
-
-
-
-<meta name="generator" content="Hexo 6.3.0"></head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+    <!-- ### Site Verification ### -->
     
 
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">PasserBo Blog Site</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle"></p>
-      
-  </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
+    <meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="PasserBo Blog Site"><meta name="msapplication-starturl" content="http://example.com"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="PasserBo Blog Site"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<nav class="site-nav">
-  
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="About Me | PasserBo Blog Site"><meta property="og:site_name" content="PasserBo Blog Site"><meta property="og:type" content="website"><meta property="og:url" content="http://example.com/about/"><meta property="og:locale" content="en"><meta name="description" content="Hello, I’m YiyangData Scientist &amp;#x2F; Machine Learning Engineer &amp;#x2F; Blogger Blog | GitHub | Resume  I am Master CS student at UIUC Research Assistant of [CWRU Bioinfo Labs)   About meExtensive Exp - Yiyang Xu - PasserBo Blog Site"><meta property="article:published_time" content="2024-01-26T16:13:31.000Z"><meta property="article:modified_time" content="2024-05-26T21:22:15.551Z"><meta property="og:updated_time" content="2024-05-26T21:22:15.551Z">
 
-  
-    <ul id="menu" class="menu">
-      
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="http://example.com/about/">
+
+    <meta name="generator" content="Hexo 4.2.1">
+
+    <!-- ### Analytics ### -->
+    
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">PasserBo Blog Site</a></h1>
+
+    <p class="text-center header-slogan">
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+                Hi, nice to meet you.
             
-            Home
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-about"></i> <br />
-            
-            About
-          </a>
-        </li>
-      
+    </p>
 
-      
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">Home</a>
+    
+    
+        <a href="/archives/" class="navbar-link">Archives</a>
+    
+    
+        <a href="/search" class="navbar-link">Search</a>
+    
+    
+    
+        <div class="dropdown dropdown-right">
+    <a class="navbar-link dropdown-toggle" tabindex="0">Share</a>
+    <ul class="menu share-menu">
+
+        <!-- Share Weibo -->
+        
+        <li class="menu-item">
+            <a href="http://service.weibo.com/share/share.php?appkey=&title=PasserBo Blog Site&url=http://example.com&pic=http://example.com/img/suka-favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">Share to Weibo</a>
+        </li>
+        
+
+        <!-- Share Twitter -->
+        
+        <li class="menu-item">
+            <a href="https://twitter.com/intent/tweet?text=PasserBo Blog Site&url=http://example.com&via=Yiyang Xu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+        </li>
+        
+
+        <!-- Share Facebook -->
+        
+        <li class="menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+        </li>
+        
+
+        <!-- Share Google+ -->
+        
+        <li class="menu-item">
+            <a href="https://plus.google.com/share?url=http://example.com" target="_blank" rel="external noopener noreferrer nofollow">Share to Google+</a>
+        </li>
+        
+
+        <!-- Share LinkedIn -->
+        
+        <li class="menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com&title=About Me" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+        </li>
+        
+
+        <!-- Share QQ -->
+        
+        <li class="menu-item">
+            <a href="http://connect.qq.com/widget/shareqq/index.html?site=PasserBo Blog Site&title=About Me&summary=&pics=http://example.com/img/suka-favicon.ico&url=http://example.com" target="_blank" rel="external noopener noreferrer nofollow"> Share to QQ</a>
+        </li>
+        
+
+        <!-- Share Telegram -->
+        
+        <li class="menu-item">
+            <a href="https://t.me/share/url?url=http://example.com&text=About Me" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+        </li>
+        
+
+        <!-- QRCode -->
+        
+        <li class="menu-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAB0CAAAAABx8Un7AAABNklEQVR42u3Z0Q7CIAyFYd7/pfVWCe05IHSY/Nxostlviawt0F4PjAYKCrqEtmSMrn/+7iugiANaiw7/9CBof73/zOKA1qKjCdRjGaDigN6Djr5n94D+D6omE+h9aPayR8X6WJUB/RlVjZn7ubUbBF1GrYVP0oQfW7WBLqMqCWRAtqiyqwzodtQBsmSumnLQenTUgGVwmxhW5wC6HVUvu1u0oxiyyoAeQdUGpDvB7GYb9DiqNqLCIGICTTXboNvQ6OV2NpWzZk1WGdBjaHSzC0WAVWVAj6DqwCDbpJIbG/0DgpagM5scKumrgz/QGnT1IN5NIKDPoM5BfNaUO40baD2aNVSzCT+MAXoN6hzOWxtgoFegbuJ3FsqgtaiT8GXjpR4ItAx1GjNV2K3EAVqCVg5QUNCp8QYWXNDxHzysEgAAAABJRU5ErkJggg==" alr="QRCode">
+        </li>
+        
+
     </ul>
-  
-
-  
+</div>
+    
+    
 </nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-    
-    
-    <div class="post-block page">
-      <header class="post-header">
-
-	<h1 class="post-title" itemprop="name headline">About Me</h1>
-
-
-
 </header>
 
-      
-      
-      
-      <div class="post-body">
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">About Me</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif" alt="Yiyang Xu's Avatar">
+        <span>2024-01-26</span>
         
         
-          <h2 id="Hi-I’m-Yiyang-Xu"><a href="#Hi-I’m-Yiyang-Xu" class="headerlink" title="Hi, I’m Yiyang Xu"></a>Hi, I’m Yiyang Xu</h2><p>I’m currently a master student at the University of Illinois at Urbana Champaign studying computer science.</p>
-<p><strong>[-] Development</strong></p>
-<p>A few things about me</p>
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
+</span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+            <div class="dropdown dropdown-right">
+<a class="dropdown-toggle" tabindex="0">Share the post</a>
+<ul class="menu share-menu">
+    <!-- Share Weibo -->
+    
+    <li class="menu-item">
+        <a href="http://service.weibo.com/share/share.php?appkey=&title=About Me&url=http://example.com/about/&pic=http://example.com/img/suka-favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">Share to Weibo</a>
+    </li>
+    
+
+    <!-- Share Twitter -->
+    
+    <li class="menu-item">
+        <a href="https://twitter.com/intent/tweet?text=About Me&url=http://example.com/about/&via=Yiyang Xu" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+    </li>
+    
+
+    <!-- Share Facebook -->
+    
+    <li class="menu-item">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/about/" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+    </li>
+    
+
+    <!-- Share Google+ -->
+    
+    <li class="menu-item">
+        <a href="https://plus.google.com/share?url=http://example.com/about/" target="_blank" rel="external noopener noreferrer nofollow">Share to Google+</a>
+    </li>
+    
+
+    <!-- Share LinkedIn -->
+    
+    <li class="menu-item">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com/about/&title=PasserBo Blog Site" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+    </li>
+    
+
+    <!-- Share QQ -->
+    
+    <li class="menu-item">
+        <a href="http://connect.qq.com/widget/shareqq/index.html?site=PasserBo Blog Site&title=PasserBo Blog Site&summary=&pics=http://example.com/img/suka-favicon.ico&url=http://example.com/about/" target="_blank" rel="external noopener noreferrer nofollow"> Share to QQ</a>
+    </li>
+    
+
+    <!-- Share Telegram -->
+    
+    <li class="menu-item">
+        <a href="https://t.me/share/url?url=http://example.com/about/&text=PasserBo Blog Site" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+    </li>
+    
+
+    <!-- QRCode -->
+    
+    <li class="menu-item">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAB0CAAAAABx8Un7AAABNklEQVR42u3Z0Q7CIAyFYd7/pfVWCe05IHSY/Nxostlviawt0F4PjAYKCrqEtmSMrn/+7iugiANaiw7/9CBof73/zOKA1qKjCdRjGaDigN6Djr5n94D+D6omE+h9aPayR8X6WJUB/RlVjZn7ubUbBF1GrYVP0oQfW7WBLqMqCWRAtqiyqwzodtQBsmSumnLQenTUgGVwmxhW5wC6HVUvu1u0oxiyyoAeQdUGpDvB7GYb9DiqNqLCIGICTTXboNvQ6OV2NpWzZk1WGdBjaHSzC0WAVWVAj6DqwCDbpJIbG/0DgpagM5scKumrgz/QGnT1IN5NIKDPoM5BfNaUO40baD2aNVSzCT+MAXoN6hzOWxtgoFegbuJ3FsqgtaiT8GXjpR4ItAx1GjNV2K3EAVqCVg5QUNCp8QYWXNDxHzysEgAAAABJRU5ErkJggg==" alt="QRCode">
+    </li>
+    
+
+</ul>
+</div>
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Hello-I’m-Yiyang"><span class="post-toc-number">1.</span> <span class="post-toc-text">Hello, I’m Yiyang</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#I-am"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">I am</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#About-me"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">About me</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Extensive-Experience-in-Machine-Learning"><span class="post-toc-number">1.0.2.1.</span> <span class="post-toc-text">Extensive Experience in Machine Learning</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Proficiency-in-Data-Analysis"><span class="post-toc-number">1.0.2.2.</span> <span class="post-toc-text">Proficiency in Data Analysis</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Advanced-Python-Knowledge-and-Common-Data-Analysis-Libraries"><span class="post-toc-number">1.0.2.3.</span> <span class="post-toc-text">Advanced Python Knowledge and Common Data Analysis Libraries</span></a></li></ol></li></ol></li></ol></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <h1 id="Hello-I’m-Yiyang"><a href="#Hello-I’m-Yiyang" class="headerlink" title="Hello, I’m Yiyang"></a>Hello, I’m <strong>Yiyang</strong></h1><p><strong>Data Scientist &#x2F; Machine Learning Engineer &#x2F; Blogger</strong></p>
+<p><a href="https://passerbo.github.io/" target="_blank" rel="noopener">Blog</a> | <a href="https://github.com/PasserBo" target="_blank" rel="noopener">GitHub</a> | <a href="https://drive.google.com/file/d/1e3X7FQ0yTnUV1BuiSk8R5k2cMJHSjnSc/view?usp=drive_link" target="_blank" rel="noopener">Resume</a></p>
+<hr>
+<h3 id="I-am"><a href="#I-am" class="headerlink" title="I am"></a>I am</h3><ul>
+<li>Master CS student at UIUC</li>
+<li>Research Assistant of [CWRU Bioinfo Labs)</li>
+</ul>
+<hr>
+<h3 id="About-me"><a href="#About-me" class="headerlink" title="About me"></a>About me</h3><h4 id="Extensive-Experience-in-Machine-Learning"><a href="#Extensive-Experience-in-Machine-Learning" class="headerlink" title="Extensive Experience in Machine Learning"></a>Extensive Experience in Machine Learning</h4><p>I have extensive experience in machine learning through various ML projects, where I have developed and fine-tuned models to meet specific requirements. </p>
 <ul>
-<li><p>I expertise in:</p>
+<li><p><strong>Research Assistant</strong>: During my experience as a research assistant in the Department of Biomedical Engineering at Case Western Reserve University, I implemented machine learning algorithms for data analysis and predictive modeling. </p>
 </li>
-<li><p>Languages:</p>
-</li>
-<li><p>Databases:</p>
-</li>
-<li><p>Front-end: React.js,</p>
+<li><p><strong>Transfer Learning</strong>: I worked on the Domain Adaptation for Visual Emotion Classification project, where I applied transfer learning techniques to improve model performance. These experiences have enhanced my ability to adapt to new machine learning tasks and apply appropriate methodologies based on project<br>needs. [Code](<a href="https://github.com/JackyXu866/Circular-structured-representation" target="_blank" rel="noopener">GitHub - JackyXu866&#x2F;Circular-structured-representation: This is the official implementation of 2021 CVPR paper &quot;A Circular-structured Representation for Visual Emotion Distribution Learning&quot;.</a>)</p>
 </li>
 </ul>
+<h4 id="Proficiency-in-Data-Analysis"><a href="#Proficiency-in-Data-Analysis" class="headerlink" title="Proficiency in Data Analysis"></a>Proficiency in Data Analysis</h4><p>My knowledge extends to various aspects of data analysis, including text and image analysis. </p>
+<ul>
+<li><p><strong>Text Analysis</strong>: As a developer of a<u> Large Language Model</u> Text Summarizer Application, I integrated the <u>GPT-3.5-turbo model</u> to create a web app that effectively condensed large-scale texts into more manageable formats. This hands-on experience has equipped me with practical skills in developing and utilizing advanced text analysis methods. </p>
+</li>
+<li><p><strong>Image Analysis</strong>: I have experience in image analysis and computer vision. I have worked on projects involving image classification, object detection, and segmentation using convolutional neural networks (<u>CNNs</u>) and frameworks such as <u>TensorFlow</u> and <u>Keras</u>. For instance, in a project on visual emotion classification, I utilized CNNs to extract features from images and classify them based on emotional content.</p>
+</li>
+</ul>
+<h4 id="Advanced-Python-Knowledge-and-Common-Data-Analysis-Libraries"><a href="#Advanced-Python-Knowledge-and-Common-Data-Analysis-Libraries" class="headerlink" title="Advanced Python Knowledge and Common Data Analysis Libraries"></a>Advanced Python Knowledge and Common Data Analysis Libraries</h4><ul>
+<li>Through numerous research projects and coursework, I have honed my skills in <u>Python</u> and essential data analysis libraries such as pandas, <u>NumPy</u>, NLTK, gensim, Matplotlib, and <u>scikit-learn</u>. Additionally, I have considerable experience using JupyterLab and <u>Google Colab</u> to facilitate data analysis and visualization tasks efficiently.</li>
+</ul>
 
-        
-      </div>
-      
-      
-      
-    </div>
+                    </article>
+                    
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">This article was last updated on <span id="date-expire-num"></span> days ago, and the information described in the article may have changed.</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2024-05-26");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2024-01-26T16:13:31.000Z" itemprop="datePublished">2024-01-26</time>
+
+    , Updated at&nbsp;<time datetime="2024-05-26T21:22:15.551Z" itemprop="dateModified">2024-05-26</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
     
+
+    <!-- Next Nav -->
     
-    
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name"></p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives">
-              
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hi-I%E2%80%99m-Yiyang-Xu"><span class="nav-number">1.</span> <span class="nav-text">Hi, I’m Yiyang Xu</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Yiyang Xu</span>
-
-  
+</ul>
 </div>
 
+                
+                    <!-- # Comment # -->
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="http://example.com">PasserBo Blog Site</a>
+        </p>
 
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Viewers</span>
+        
+            <span>|</span>
+        
+    </span>
 
 
 
 
         
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
 
 
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
 
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
+<script>
 
     
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
 
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
 </script>
 
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
 
 
+<!-- Offset -->
 
 
 
 
+<!-- Comment -->
 
 
-  
+<!-- ### Custom Footer ### -->
 
+    </body>
 
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-</body>
 </html>
